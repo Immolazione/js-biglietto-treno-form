@@ -14,3 +14,4 @@ const fName = document.getElementById('fname-lname');
 const distance = document.getElementById('km');
 const age = document.getElementById('age');
 
+document.querySelector('button')
