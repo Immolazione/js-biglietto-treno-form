@@ -66,6 +66,21 @@ generateButton.addEventListener('click', function(){
 
     ticketSection.classList.remove('d-none')
 
+    for (i = 0; i < formField.length; i++) {
+        const currentField = formField[i];
+        switch (currentField.id) {
+            case ('age'):
+                currentField.value = '--'
+                break;
+            case ('name'):
+                currentField.value = ''
+                break;
+            case ('km'):
+                currentField.value = ''
+                break;
+        }
+    }
+
 })
 
 resetButton.addEventListener('click', function(){
