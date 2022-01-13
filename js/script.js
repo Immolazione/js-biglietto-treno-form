@@ -35,16 +35,30 @@ generateButton.addEventListener('click', function(){
 
     // CALCOLO PREZZO BSE
     let price = 0.21 * distanceValue;
-
+    let discountOffer = 'Tariffa Ordinaria';
+    
     // CALCOLO PREZZO CON SCONTI
     if (age.value === 'minor') {
         price *= 0.60;
+        discountOffer = 'Tariffa Minorenni';
     } else if (age.value === 'over') {
         price *= 0.80;
+        discountOffer = 'Tariffa Senior';
     }
     console.log(price);
+
+    // RANDOMIZZO CODICE CP
+    let cpRnd = Math.floor(Math.random() * (100000 - 90000) + 90000);
+    console.log(cpRnd);
+
+    // RANDOMIZZO CARGO
+    let cargoRnd = Math.floor(Math.random() * 12) +1;
+    console.log(cargoRnd);
 
     // METTO I VALORI NEL TICKET
     passengerName.innerHTML = nameValue;
     ticketPrice.innerHTML = price.toFixed(2);
+    offer.innerHTML = discountOffer;
+    cpCode.innerHTML = cpRnd;
+    cargo.innerHTML = cargoRnd;
 })
