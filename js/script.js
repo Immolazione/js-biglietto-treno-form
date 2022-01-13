@@ -14,6 +14,8 @@ const distance = document.getElementById('km');
 const age = document.getElementById('age');
 const generateButton = document.getElementById('generate');
 const resetButton = document.getElementById('reset');
+const ticketSection = document.getElementById('ticket-section');
+const formField = document.querySelectorAll('.form-field')
 
 // RECUPERO ELEMENTI BIGLIETTO
 const passengerName = document.getElementById('passengerName');
@@ -61,4 +63,10 @@ generateButton.addEventListener('click', function(){
     offer.innerHTML = discountOffer;
     cpCode.innerHTML = cpRnd;
     cargo.innerHTML = cargoRnd;
+
+    ticketSection.classList.remove('d-none')
+
+})
+
+resetButton.addEventListener('click', function(){
 })
