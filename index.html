@@ -9,19 +9,19 @@
 </head>
 <body class="p-5">
     <!-- FORM -->
-    <section>
+    <section id="form-section">
         <h1 class="mb-4">INSERISCI I TUOI DATI DI VIAGGIO:</h1>
         <div class="mb-4">
             <label for="name">Inserisci il nome</label>
-            <input id="name" type="text" name="name">
+            <input id="name" class="form-field" type="text" name="name">
         </div>
         <div class="mb-4">
             <label for="number">Km da percorrere</label>
-            <input id="km" type="number" name="km" step="10" min="10" max="500">
+            <input id="km" class="form-field" type="number" name="km" step="10" min="10" max="500">
         </div>
         <div class="mb-4">
             <label for="age">Fascia d'età</label>
-            <select name="age" id="age">
+            <select name="age" id="age" class="form-field">
                 <option value="major">Maggiorenne</option>
                 <option value="minor">Minorenne</option>
                 <option value="over">Over 65</option>
@@ -32,7 +32,7 @@
     </section>
     <hr class="mt-5 mb-5">
     <!-- BIGLIETTO -->
-    <section>
+    <section id="ticket-section" class="d-none">
         <div id="ticket">
             <h1>Nome Passeggero: <span id="passengerName"></span></h1>
             <h4>Offerta: <span id="offer"></span></h4>
