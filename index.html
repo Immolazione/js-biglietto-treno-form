@@ -7,27 +7,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Biglietto treno</title>
 </head>
-<body>
+<body class="p-5">
     <!-- FORM -->
-    <div>
-        <input id="fname-lname" type="text" name="fname-lname">
-        <input id="km" type="number" name="km">
-        <select name="age" id="age">
-            <option value="--">--</option>
-            <option value="minor">Minorenne</option>
-            <option value="major">Maggiorenne</option>
-            <option value="over">Over 65</option>
-        </select>
-        <button>Genera</button>
-    </div>
+    <section>
+        <div class="mb-4">
+            <label for="name">Inserisci il nome</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <div class="mb-4">
+            <label for="number">Km da percorrere</label>
+            <input id="km" type="number" name="km" step="10" min="10" max="500">
+        </div>
+        <div class="mb-4">
+            <label for="age">Fascia d'età</label>
+            <select name="age" id="age">
+                <option value="--">--</option>
+                <option value="major">Maggiorenne</option>
+                <option value="minor">Minorenne</option>
+                <option value="over">Over 65</option>
+            </select>
+        </div>
+        <button type="button">Genera</button>
+        <button type="button">Annulla</button>
+    </section>
+    <hr class="mt-5 mb-5">
     <!-- BIGLIETTO -->
-    <div id="ticket">
-        <!-- NOME PASSEGGERO
-        OFFERTA
-        CARROZZA 
-        CODICE CP
-        COSTO BIGLIETTO -->
-    </div>
+    <section>
+        <div id="ticket">
+            <h1>Nome Passeggero: <span></span></h1>
+            <h4>Offerta: <span></span></h4>
+            <h4>Carrozza: <span></span></h4>
+            <h4>Codice CP: <span></span></h4>
+            <h4>Costo Biglietto: <span></span></h4>
+        </div>        
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
