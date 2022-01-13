@@ -33,6 +33,18 @@ generateButton.addEventListener('click', function(){
     distanceValue = distance.value;
     ageValue = age.value;
 
+    // CALCOLO PREZZO BSE
+    let price = 0.21 * distanceValue;
+
+    // CALCOLO PREZZO CON SCONTI
+    if (age.value === 'minor') {
+        price *= 0.60;
+    } else if (age.value === 'over') {
+        price *= 0.80;
+    }
+    console.log(price);
+
     // METTO I VALORI NEL TICKET
     passengerName.innerHTML = nameValue;
+    ticketPrice.innerHTML = price.toFixed(2);
 })
