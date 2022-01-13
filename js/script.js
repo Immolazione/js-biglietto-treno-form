@@ -8,10 +8,31 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 -va applicato uno sconto del 40% per gli over 65.
 Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo).*/
 
-//CHIEDO NOME, COGNOME, NUMERO KM E ANNI
-
-const fName = document.getElementById('fname-lname');
+//RECUPERO ELEMENTI FORM
+const firstName = document.getElementById('name');
 const distance = document.getElementById('km');
 const age = document.getElementById('age');
+const generateButton = document.getElementById('generate');
+const resetButton = document.getElementById('reset');
 
-document.querySelector('button')
+// RECUPERO ELEMENTI BIGLIETTO
+const passengerName = document.getElementById('passengerName');
+const offer = document.getElementById('offer');
+const cargo = document.getElementById('cargo');
+const cpCode = document.getElementById('cpCode');
+const ticketPrice = document.getElementById('ticketPrice');
+
+let nameValue;
+let distanceValue;
+let ageValue;
+
+// EVENTO CLICK A GENERATEBUTTON
+generateButton.addEventListener('click', function(){
+    // RECUPERO I VALORI
+    nameValue = firstName.value;
+    distanceValue = distance.value;
+    ageValue = age.value;
+
+    // METTO I VALORI NEL TICKET
+    passengerName.innerHTML = nameValue;
+})
